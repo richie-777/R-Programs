@@ -1,0 +1,22 @@
+# Create a sample data set
+data <- c(1, 2, 3, 4, 5)
+
+# Using apply function
+apply_result <- apply(data, 2, mean)
+print(apply_result)
+
+# Using sapply function
+sapply_result <- sapply(data, mean)
+print(sapply_result)
+
+# Using mapply function
+mapply_result <- mapply(mean, data, data+1)
+print(mapply_result)
+
+# Using tapply function
+tapply_result <- tapply(data, data > 2, mean)
+print(tapply_result)
+
+# Using lapply function
+lapply_result <- lapply(data, function(x) x*2)
+print(lapply_result)
