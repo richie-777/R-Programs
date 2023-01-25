@@ -1,0 +1,14 @@
+library(lm)
+
+# Function to perform linear regression
+linear_regression <- function(x, y) {
+  model <- lm(y ~ x) # fit a linear model
+  summary(model) # display the summary of the model
+  plot(x, y, main = "Linear Regression") # plot the data
+  abline(model, col = "red") # add the regression line
+}
+
+# Test the function
+x <- c(1, 2, 3, 4, 5)
+y <- c(2, 4, 6, 8, 10)
+linear_regression(x, y)
